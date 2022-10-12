@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
+import subprocess
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
@@ -21,7 +22,11 @@ def verify_password(username, password):
 @app.route('/')
 @auth.login_required
 def index():
-    return "Hello, %s!" % auth.current_user()
+    print("subprocess has been called")
+    subprocess.call("./test1.py")
+    print("Back to app.py")
+    return "Hello, %s!" % (auth.current_user())
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=105)

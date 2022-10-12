@@ -4,5 +4,6 @@ RUN pip3 install Flask
 RUN pip3 install flask_httpauth
 RUN pip3 install werkzeug
 COPY app.py .
+COPY test1.py .
 EXPOSE 105
 ENTRYPOINT ["python3", "app.py"]
