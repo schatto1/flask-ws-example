@@ -35,6 +35,12 @@ As such, a production-ready WSGI server such as Gunicorn is needed. This templat
 
 Documentation for Gunicorn can be found [here](https://gunicorn.org/#docs).
 
+### Flask-HTTPAuth
+
+Sometimes, to add more security, you would want authentication to be part of your app. This template app uses Flask-HTTPAuth, a Flask extension that simplifies the use of HTTP authentication with Flask routes, to provide a simple framework to implement basic, digest, and token authenticaton.
+
+Further documentation can be found [here](https://flask-httpauth.readthedocs.io/en/latest/).
+
 ## Author
 
 👤 **Sumon Chattopadhyay**

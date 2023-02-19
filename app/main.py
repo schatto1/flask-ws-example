@@ -32,6 +32,11 @@ def index():
     return "Hello, %s!" % (auth.current_user())
 
 
+@app.route('/bypass')
+def bypass():
+    return "You've bypassed the authentication! Way to go!"
+
+
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=5555)
 
