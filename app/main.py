@@ -29,7 +29,7 @@ def verify_password(username, password):
 @auth.login_required
 def index():
     print("subprocess has been called")
-    subprocess.call("./test1.py")
+    subprocess.call("./app/test1.py")
     print("Back to app.py")
     return "Hello, %s!" % (auth.current_user())
 
