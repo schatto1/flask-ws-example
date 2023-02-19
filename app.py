@@ -2,9 +2,15 @@ from flask import Flask
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 import subprocess
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
+
+# API tokens and URLs should be read from a .env file
+# Make sure you have this file set up before starting the app
+load_dotenv()
 
 users = {
     "john": generate_password_hash("hello"),
@@ -29,5 +35,5 @@ def index():
 
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=105)
+  app.run(host='0.0.0.0', port=5555)
 
