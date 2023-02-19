@@ -15,7 +15,7 @@ If you want to see the server in your terminal, remove `-d`.
 
 ## Features
 
-This template app come packages in a Docker container. Additionally, `docker-compose` volume mounting let's the app "hot reload", or reflect changes in the codebase immediately without re-building and re-deploying the container.
+This template app comes packaged in a Docker container. Additionally, `docker-compose` volume mounting let's the app "hot reload", or reflect changes in the codebase immediately without re-building and re-deploying the container.
 
 ## Packages used
 
