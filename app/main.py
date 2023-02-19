@@ -17,13 +17,11 @@ users = {
     "susan": generate_password_hash("bye")
 }
 
-
 @auth.verify_password
 def verify_password(username, password):
     if username in users and check_password_hash(users.get(username),
                                                  password):
         return username
-
 
 @app.route('/')
 @auth.login_required
