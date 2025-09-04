@@ -34,6 +34,7 @@ def index():
 
 @app.route('/bypass')
 def bypass():
+    print("bypass has been called")
     return "You've bypassed the authentication! Way to go!"
 
 
